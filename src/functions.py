@@ -39,6 +39,6 @@ def generateSyntheticSound(frequency, duration, fs=44100):
 # Given a magnitude array and F, get the max magnitude
 def getMaxMagnitude(array: list, F):
     pos = np.where(array == np.max(array))
-    return F[pos]
+    return F[pos[0]]
 
 
