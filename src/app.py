@@ -22,3 +22,6 @@ df = getDiscreteFrequency(fs, transform)
 
 # 7. Get the predominant frequency
 frequency = getMaxMagnitude(magnitude, df)
+
+# 8. Print the frequency
+print(frequency)
