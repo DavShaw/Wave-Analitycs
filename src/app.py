@@ -1,9 +1,10 @@
 import matplotlib.pyplot as plt
-from functions import getPhase, getFft, getWaveData, getMagnitude
+from functions import getPhase, getFft, getWaveData, getMagnitude, getGenr
 from functions import getDiscreteFrequency, getMaxMagnitude, getTimeVector
 
 # 1. Get the sound
-fs, sound = getWaveData("src/man.wav")
+path = "src/david1.wav"
+fs, sound = getWaveData(path)
 
 # 2. Get the fft
 transform = getFft(sound)
@@ -23,5 +24,11 @@ df = getDiscreteFrequency(fs, transform)
 # 7. Get the predominant frequency
 frequency = getMaxMagnitude(magnitude, df)
 
-# 8. Print the frequency
-print(frequency)
+# 8. Get the gender 
+gender_dic = {1: "woman", 0: "man", -1: "unknown"}
+gender = getGenr(frequency)
+gender = gender_dic[gender]
+
+#9. Print the gender and frequency
+print(f"Voice / Sound used: {path}")
+print(f"Voice gender detected: {gender} ({frequency}hz)")

@@ -57,23 +57,30 @@ def getMaxMagnitude(magnitude, df):
     return df[posm]
 
 
-def get_genr(frequency):
+def getGenr(frequency, activate_error=False, error=(15/100)):
     men_range = (85, 155)
     women_range = (165, 255)
 
-    error_thredshold = 15/100
+    if activate_error:
+        error_threshold = error
 
-    men_range_a = men_range * (1 - error_thredshold)
-    men_range_b = men_range * (1 + error_thredshold)
-    women_range_a = women_range * (1 - error_thredshold)
-    women_range_b = women_range * (1 + error_thredshold)
+        men_range_a = men_range[0] * (1 - error_threshold)
+        men_range_b = men_range[1] * (1 + error_threshold)
+        women_range_a = women_range[0] * (1 - error_threshold)
+        women_range_b = women_range[1] * (1 + error_threshold)
+        men = range(int(men_range_a), int(men_range_b) + 1)
+        women = range(int(women_range_a), int(women_range_b) + 1)
+    else:
+        men = range(men_range[0], men_range[1])
+        women = range(women_range[0], women_range[1])
 
-    men = range(men_range_a, men_range_b)
-    women = range(women_range_a, women_range_b)
-
-    if frequency in men:
+    if withinInterval(frequency, men):
         return 0
-    elif frequency in women:
+    elif withinInterval(frequency, women):
         return 1
     else:
         return -1
+
+
+def withinInterval(number, interval):
+    return (number >= interval[0]) and (number <= interval[-1])
