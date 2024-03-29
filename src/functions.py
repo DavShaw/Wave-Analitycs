@@ -26,11 +26,13 @@ def getPhase(array: list):
 def getTimeVector(array: list, fs: int):
     return np.arange(0, len(array)/fs, 1/fs)
 
-# Given a path, get the wave data
+# Given a path, get the wave data (fixed)
 
 
 def getWaveData(path: str):
     fs, data = wav.read(path)
+    if len(data.shape) > 1:
+        return fs, data[:, 0]
     return fs, data
 
 # Given a fs and a wave, get the discrete frequency
