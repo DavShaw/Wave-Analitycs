@@ -2,23 +2,23 @@ import numpy as np
 import scipy.fftpack as fft
 import scipy.io.wavfile as wav
 
-# Given a wave, get the fourier transform
+# Given a wave, get the fourier transform (doesnt need to be fixed)
 
 
 def getFft(array: list):
     return fft.fft(array)
 
-# Given a fourier transform, get the magnitude
+# Given a fourier transform, get the magnitude (fixed)
 
 
-def getMagnitude(array: list):
-    return np.abs(array)
+def getMagnitude(data: list):
+    return (np.abs(data))[0:len(data)//2]
 
-# Given a fourier transform, get the phase
+# Given a fourier transform, get the phase (doesnt need to be fixed)
 
 
-def getPhase(array: list):
-    return np.angle(array)
+def getPhase(transform: list):
+    return np.angle(transform)
 
 # Given a fourier transform and fs, get the time vector (fixed)
 
@@ -35,13 +35,11 @@ def getWaveData(path: str):
         return fs, data[:, 0]
     return fs, data
 
-# Given a fs and a wave, get the discrete frequency
+# Given a fs and a wave, get the discrete frequency (fixed)
 
 
-def getDiscreteFrequency(fs, wave):
-    length = len(wave)
-    F = fs * np.arange(length) / length  # Full frequency range
-    return F
+def getDiscreteFrequency(fs, transform):
+    return fs * np.arange(0, len(transform)//2)/len(transform)
 # This functions has been made by ChatGPT (100% IA)
 
 
@@ -54,10 +52,9 @@ def generateSyntheticSound(frequency, duration, fs=44100):
 # Given a magnitude array and F, get the max magnitude
 
 
-def getMaxMagnitude(array, F):
-    coords = np.where(array == np.max(F))
-    print(f"Algo: {coords[0]}")
-    return F[coords[0]]
+def getMaxMagnitude(magnitude, F):
+    posm = np.where(magnitude == np.max(magnitude))
+    return F[posm]
 
 
 def determinar_sexo(frecuencia):
