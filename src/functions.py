@@ -52,9 +52,16 @@ def generateSyntheticSound(frequency, duration, fs=44100):
 # Given a magnitude array and F, get the max magnitude
 
 
-def getMaxMagnitude(magnitude, F):
+def getMaxMagnitude(magnitude, df):
     posm = np.where(magnitude == np.max(magnitude))
-    return F[posm]
+    return df[posm]
+
+
+def get_genr(frequency):
+    men_range(85, 155)
+    women_range(165, 255)
+
+    error_thredshold = 15/100
 
 
 def determinar_sexo(frecuencia):

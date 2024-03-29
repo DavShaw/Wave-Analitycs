@@ -1,22 +1,24 @@
 import matplotlib.pyplot as plt
-from functions import getPhase, getFft, getWaveData  # , generateSyntheticSound
-from functions import getDiscreteFrequency, getMaxMagnitude, getMagnitude
+from functions import getPhase, getFft, getWaveData, getMagnitude
+from functions import getDiscreteFrequency, getMaxMagnitude, getTimeVector
 
-fs, mySound = getWaveData("src/sound125hz.wav")
-# fs, mySound = 44100, generateSyntheticSound(4856, 8)
+# 1. Get the sound
+fs, sound = getWaveData("src/man.wav")
 
-length = len(mySound)
+# 2. Get the fft
+transform = getFft(sound)
 
-fourier = getFft(mySound)
-magnitude = getMagnitude(fourier)
-magnitude = magnitude[:length]
-phase = getPhase(fourier)
-F = getDiscreteFrequency(fs, mySound)
-themax = getMaxMagnitude(magnitude, F)
+# 3. Get the magnitude
+magnitude = getMagnitude(transform)
 
-plt.plot(F, magnitude)
-plt.xlabel("Freq (Hz)")
-plt.ylabel("Mag")
-plt.show()
+# 4. Get the phase
+phase = getPhase(transform)
 
-print(themax)
+# 5. Get the time vector
+time = getTimeVector(sound, fs)
+
+# 6. Get the discrete frequency
+df = getDiscreteFrequency(fs, transform)
+
+# 7. Get the predominant frequency
+frequency = getMaxMagnitude(magnitude, df)
