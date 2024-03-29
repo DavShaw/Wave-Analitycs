@@ -5,14 +5,14 @@ import scipy.io.wavfile as wav
 # Given a wave, get the fourier transform (doesnt need to be fixed)
 
 
-def getFft(array: list):
-    return fft.fft(array)
+def getFft(sound: list):
+    return fft.fft(sound)
 
 # Given a fourier transform, get the magnitude (fixed)
 
 
-def getMagnitude(data: list):
-    return (np.abs(data))[0:len(data)//2]
+def getMagnitude(transform: list):
+    return (np.abs(transform))[0:len(transform)//2]
 
 # Given a fourier transform, get the phase (doesnt need to be fixed)
 
@@ -20,11 +20,11 @@ def getMagnitude(data: list):
 def getPhase(transform: list):
     return np.angle(transform)
 
-# Given a fourier transform and fs, get the time vector (fixed)
+# Given a sound and fs, get the time vector (fixed)
 
 
-def getTimeVector(data: list, fs: int):
-    return np.arange(0, len(data))/fs
+def getTimeVector(sound: list, fs: int):
+    return np.arange(0, len(sound))/fs
 
 # Given a path, get the wave data (fixed)
 
