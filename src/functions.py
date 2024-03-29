@@ -20,11 +20,11 @@ def getMagnitude(array: list):
 def getPhase(array: list):
     return np.angle(array)
 
-# Given a fourier transform and fs, get the time vector
+# Given a fourier transform and fs, get the time vector (fixed)
 
 
-def getTimeVector(array: list, fs: int):
-    return np.arange(0, len(array)/fs, 1/fs)
+def getTimeVector(data: list, fs: int):
+    return np.arange(0, len(data))/fs
 
 # Given a path, get the wave data (fixed)
 
