@@ -58,29 +58,22 @@ def getMaxMagnitude(magnitude, df):
 
 
 def get_genr(frequency):
-    men_range(85, 155)
-    women_range(165, 255)
+    men_range = (85, 155)
+    women_range = (165, 255)
 
     error_thredshold = 15/100
 
+    men_range_a = men_range * (1 - error_thredshold)
+    men_range_b = men_range * (1 + error_thredshold)
+    women_range_a = women_range * (1 - error_thredshold)
+    women_range_b = women_range * (1 + error_thredshold)
 
-def determinar_sexo(frecuencia):
-    # Rango de frecuencia típico para hombres y mujeres
-    hombres_rango = (85, 155)
-    mujeres_rango = (165, 255)
+    men = range(men_range_a, men_range_b)
+    women = range(women_range_a, women_range_b)
 
-    # Umbral para la probabilidad
-    umbral_probabilidad = 0.7
-
-    # Probabilidad de que la frecuencia pertenezca a un hombre
-    probabilidad_hombre = 1 / \
-        (1 + np.exp(-(frecuencia -
-         hombres_rango[0]) / (hombres_rango[1] - hombres_rango[0])))
-
-    # Si la probabilidad es mayor que el umbral, predecir hombre, si no, mujer
-    if probabilidad_hombre > umbral_probabilidad:
-        return "Hombre"
-    elif probabilidad_hombre > (1 - umbral_probabilidad):
-        return "Indeterminado"
+    if frequency in men:
+        return 0
+    elif frequency in women:
+        return 1
     else:
-        return "Mujer"
+        return -1
