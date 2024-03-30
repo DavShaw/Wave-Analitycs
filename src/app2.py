@@ -1,11 +1,13 @@
-from functions import getPhase, getFft, getWaveData, getMagnitude, getGenr
+import matplotlib.pyplot as plt
+from functions import getPhase, getFft, getMagnitude, getGenr, captureAudio
 from functions import getDiscreteFrequency, getMaxMagnitude, getTimeVector
 
-# 1. Get the sound
-path = "src/david1.wav"
-fs, sound = getWaveData(path)
+# 1. Get real-time audio data from microphone
+fs = 44100
+duration = 10
+sound = captureAudio(fs, duration)
 
-# 2. Get the fft
+# 2. Get the FFT
 transform = getFft(sound)
 
 # 3. Get the magnitude
@@ -29,5 +31,13 @@ gender = getGenr(frequency)
 gender = gender_dic[gender]
 
 # 9. Print the gender and frequency
-print(f"Voice / Sound used: {path}")
-print(f"Voice gender detected: {gender} ({frequency}hz)")
+print(f"Voice gender detected: {gender} ({frequency} Hz)")
+
+# If you want to visualize audio data, you can do it here
+# For example, you can plot the waveform or frequency spectrum
+
+plt.plot(time, transform)
+plt.xlabel('Time (s)')
+plt.ylabel('Amplitude')
+plt.title('Audio waveform')
+plt.show()

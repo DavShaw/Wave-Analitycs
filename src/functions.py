@@ -1,3 +1,4 @@
+import pyaudio
 import numpy as np
 import scipy.fftpack as fft
 import scipy.io.wavfile as wav
@@ -40,7 +41,8 @@ def getWaveData(path: str):
 
 def getDiscreteFrequency(fs, transform):
     return fs * np.arange(0, len(transform)//2)/len(transform)
-# This functions has been made by ChatGPT (100% IA)
+
+# This functions has been made by ChatGPT
 
 
 def generateSyntheticSound(frequency, duration, fs=44100):
@@ -84,3 +86,23 @@ def getGenr(frequency, activate_error=False, error=(15/100)):
 
 def withinInterval(number, interval):
     return (number >= interval[0]) and (number <= interval[-1])
+
+# Function made by ChatGTP
+
+
+def captureAudio(fs, duration):
+    CHUNK = 1024
+    audio_data = []
+
+    p = pyaudio.PyAudio()
+    stream = p.open(format=pyaudio.paInt16, channels=1,
+                    rate=fs, input=True, frames_per_buffer=CHUNK)
+
+    for i in range(0, int(fs / CHUNK * duration)):
+        data = stream.read(CHUNK)
+        audio_data.append(np.frombuffer(data, dtype=np.int16))
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
+
+    return np.concatenate(audio_data)
