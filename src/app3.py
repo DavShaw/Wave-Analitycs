@@ -1,9 +1,11 @@
 import matplotlib.pyplot as plt
 from functions import getPhase, getFft, getWaveData, getMagnitude, getGenr
 from functions import getDiscreteFrequency, getMaxMagnitude, getTimeVector
+from functions import captureAudio
 
 # 1. Get the sound
-path = "src/david1.wav"
+path = "src/realtime.wav"
+captureAudio(10, path)
 fs, sound = getWaveData(path)
 
 # 2. Get the fft
