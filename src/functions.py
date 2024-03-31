@@ -1,4 +1,6 @@
 import pyaudio
+import os
+import wave
 import numpy as np
 import scipy.fftpack as fft
 import scipy.io.wavfile as wav
@@ -13,7 +15,7 @@ def getFft(sound: list):
 
 
 def getMagnitude(transform: list):
-    return (np.abs(transform))[0:len(transform)//2]
+    return (np.abs(transform))[0:len(transform) // 2]
 
 # Given a fourier transform, get the phase (doesnt need to be fixed)
 
@@ -90,7 +92,7 @@ def withinInterval(number, interval):
 # Function made by ChatGTP
 
 
-def captureAudio(fs, duration):
+def captureAudioOld(fs, duration):
     CHUNK = 1024
     audio_data = []
 
@@ -106,3 +108,34 @@ def captureAudio(fs, duration):
     p.terminate()
 
     return np.concatenate(audio_data)
+
+
+def captureAudio(duration=8, filename='src/realtimesound.wav'):
+    CHUNK = 1024
+    fs = 44100  # Frecuencia de muestreo por defecto
+
+    p = pyaudio.PyAudio()
+    stream = p.open(format=pyaudio.paInt16, channels=1,
+                    rate=fs, input=True, frames_per_buffer=CHUNK)
+
+    print("Audio recording (on)")
+    audio_data = []
+    for i in range(0, int(fs / CHUNK * duration)):
+        data = stream.read(CHUNK)
+        audio_data.append(data)
+
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
+
+    if os.path.exists(filename):
+        os.remove(filename)
+
+    wf = wave.open(filename, 'wb')
+    wf.setnchannels(1)
+    wf.setsampwidth(p.get_sample_size(pyaudio.paInt16))
+    wf.setframerate(fs)
+    wf.writeframes(b''.join(audio_data))
+    wf.close()
+
+    print("Audio recording (off)")
