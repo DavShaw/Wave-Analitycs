@@ -17,6 +17,17 @@ def getFft(sound: list):
 def getMagnitude(transform: list):
     return (np.abs(transform))[0:len(transform) // 2]
 
+
+# Given a magnitud list, get the rms value
+
+
+def getRms(magnitudeList):
+    squaredValues = np.square(magnitudeList)
+    meanSquared = np.mean(squaredValues)
+    rmsValue = np.sqrt(meanSquared)
+    return rmsValue
+
+
 # Given a fourier transform, get the phase (doesnt need to be fixed)
 
 
