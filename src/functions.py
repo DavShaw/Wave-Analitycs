@@ -110,6 +110,14 @@ def captureAudioOld(fs, duration):
     return np.concatenate(audio_data)
 
 
+def getPitch(fs, sound):
+    transform = getFft(sound)
+    magnitude = getMagnitude(transform)
+    df = getDiscreteFrequency(fs, transform)
+    pitch = getMaxMagnitude(magnitude, df)
+    return pitch
+
+
 def captureAudio(duration=8, filename='src/realtimesound.wav'):
     CHUNK = 1024
     fs = 44100  # Frecuencia de muestreo por defecto
@@ -139,3 +147,23 @@ def captureAudio(duration=8, filename='src/realtimesound.wav'):
     wf.close()
 
     print("Audio recording (off)")
+
+
+def splitSoundIntoSegments(soundArray, fs, segmentDuration=5):
+    segmentLength = fs * segmentDuration
+    totalLength = len(soundArray)
+    numSegments = totalLength // segmentLength
+    segments = []
+
+    for i in range(numSegments):
+        segmentStart = i * segmentLength
+        segmentEnd = segmentStart + segmentLength
+        segment = soundArray[segmentStart:segmentEnd]
+        segments.append(segment)
+
+    if totalLength % segmentLength >= fs:
+        lastSegmentStart = numSegments * segmentLength
+        lastSegment = soundArray[lastSegmentStart:]
+        segments.append(lastSegment)
+
+    return segments
