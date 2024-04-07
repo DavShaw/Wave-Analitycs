@@ -3,7 +3,7 @@ from functions import getDiscreteFrequency, getMaxMagnitude, getTimeVector
 from functions import getRms
 
 # 1. Get the sound
-path = "sounds/cristian.wav"
+path = "sounds/christian.wav"
 fs, sound = getWaveData(path)
 
 # 2. Get the fft
@@ -12,7 +12,6 @@ transform = getFft(sound)
 # 3. Get the magnitude
 magnitude = getMagnitude(transform)
 rms = getRms(magnitude)
-print(f"El rms es: {rms}")
 
 # 4. Get the phase
 phase = getPhase(transform)
