@@ -1,5 +1,683 @@
 {
-    "sounds/david.wav": {
+    "0": {
         "0": {
-            "rms": 1485318.6841635893,
-            "hz": 
+            "frequency": 360.2,
+            "magnitude": 1485318.6842,
+            "formant": 171.4079
+        },
+        "1": {
+            "frequency": 223.2,
+            "magnitude": 1552067.928,
+            "formant": 172.1126
+        },
+        "2": {
+            "frequency": 101.6,
+            "magnitude": 1557121.1662,
+            "formant": 171.2797
+        },
+        "3": {
+            "frequency": 412.0,
+            "magnitude": 1522081.2228,
+            "formant": 169.9416
+        },
+        "4": {
+            "frequency": 410.0,
+            "magnitude": 1762164.5516,
+            "formant": 170.2831
+        },
+        "5": {
+            "frequency": 220.2,
+            "magnitude": 1673411.6868,
+            "formant": 169.4387
+        },
+        "6": {
+            "frequency": 147.0,
+            "magnitude": 1778411.5956,
+            "formant": 171.3342
+        },
+        "7": {
+            "frequency": 224.6,
+            "magnitude": 1606694.9915,
+            "formant": 172.0778
+        },
+        "8": {
+            "frequency": 172.2,
+            "magnitude": 1356586.8008,
+            "formant": 171.5536
+        },
+        "9": {
+            "frequency": 222.6,
+            "magnitude": 1633545.2785,
+            "formant": 169.9944
+        },
+        "10": {
+            "frequency": 220.4,
+            "magnitude": 1721897.8836,
+            "formant": 171.742
+        },
+        "11": {
+            "frequency": 375.2,
+            "magnitude": 1836194.7248,
+            "formant": 171.4396
+        },
+        "12": {
+            "frequency": 410.4,
+            "magnitude": 1841933.5284,
+            "formant": 170.3315
+        },
+        "13": {
+            "frequency": 148.8,
+            "magnitude": 1784285.3503,
+            "formant": 169.9364
+        },
+        "14": {
+            "frequency": 173.4,
+            "magnitude": 1632233.8147,
+            "formant": 167.9786
+        },
+        "15": {
+            "frequency": 218.8,
+            "magnitude": 1403680.6277,
+            "formant": 168.7799
+        },
+        "16": {
+            "frequency": 221.6,
+            "magnitude": 1715856.4607,
+            "formant": 170.7465
+        },
+        "17": {
+            "frequency": 376.8,
+            "magnitude": 1554707.818,
+            "formant": 169.4611
+        },
+        "18": {
+            "frequency": 504.6,
+            "magnitude": 1628471.5554,
+            "formant": 172.2648
+        },
+        "19": {
+            "frequency": 91.6,
+            "magnitude": 1582436.3688,
+            "formant": 169.5038
+        },
+        "20": {
+            "frequency": 183.4,
+            "magnitude": 1575748.9695,
+            "formant": 170.9957
+        },
+        "21": {
+            "frequency": 222.2,
+            "magnitude": 1620274.7611,
+            "formant": 169.8674
+        },
+        "22": {
+            "frequency": 442.2,
+            "magnitude": 1932331.6758,
+            "formant": 169.2735
+        },
+        "23": {
+            "frequency": 361.0,
+            "magnitude": 1618118.1849,
+            "formant": 168.986
+        },
+        "24": {
+            "frequency": 462.4,
+            "magnitude": 1649700.515,
+            "formant": 170.0285
+        },
+        "25": {
+            "frequency": 148.0,
+            "magnitude": 2107567.5242,
+            "formant": 170.911
+        },
+        "26": {
+            "frequency": 221.4,
+            "magnitude": 1872650.1713,
+            "formant": 172.4745
+        },
+        "27": {
+            "frequency": 445.2,
+            "magnitude": 1856779.004,
+            "formant": 172.3071
+        },
+        "28": {
+            "frequency": 505.8,
+            "magnitude": 1767560.0857,
+            "formant": 170.6772
+        },
+        "29": {
+            "frequency": 171.4,
+            "magnitude": 1429581.9998,
+            "formant": 171.8329
+        },
+        "30": {
+            "frequency": 181.2,
+            "magnitude": 1726020.9048,
+            "formant": 172.5963
+        },
+        "31": {
+            "frequency": 379.4,
+            "magnitude": 1705442.5154,
+            "formant": 171.2298
+        },
+        "32": {
+            "frequency": 362.4,
+            "magnitude": 1680876.666,
+            "formant": 169.1214
+        },
+        "33": {
+            "frequency": 403.8,
+            "magnitude": 1856483.5101,
+            "formant": 171.5979
+        },
+        "34": {
+            "frequency": 171.2,
+            "magnitude": 1453847.9297,
+            "formant": 169.3449
+        },
+        "35": {
+            "frequency": 360.8,
+            "magnitude": 1705521.6129,
+            "formant": 170.8463
+        },
+        "36": {
+            "frequency": 506.0,
+            "magnitude": 1792431.1632,
+            "formant": 170.9957
+        },
+        "37": {
+            "frequency": 223.4,
+            "magnitude": 1606854.3491,
+            "formant": 171.8697
+        },
+        "38": {
+            "frequency": 98.2,
+            "magnitude": 1387219.863,
+            "formant": 171.4109
+        },
+        "39": {
+            "frequency": 144.0,
+            "magnitude": 1872696.8386,
+            "formant": 168.9215
+        },
+        "40": {
+            "frequency": 463.2,
+            "magnitude": 1408846.2348,
+            "formant": 165.8383
+        },
+        "41": {
+            "frequency": 374.6,
+            "magnitude": 1930949.0316,
+            "formant": 168.1134
+        },
+        "42": {
+            "frequency": 222.2,
+            "magnitude": 1925513.9393,
+            "formant": 170.8152
+        },
+        "43": {
+            "frequency": 217.4,
+            "magnitude": 1721373.5871,
+            "formant": 170.8453
+        },
+        "44": {
+            "frequency": 359.6311,
+            "magnitude": 1120267.8894,
+            "formant": 171.0643
+        }
+    },
+    "1": {
+        "0": {
+            "frequency": 144.0,
+            "magnitude": 2407822.1606,
+            "formant": 170.7245
+        },
+        "1": {
+            "frequency": 128.6,
+            "magnitude": 2247426.8899,
+            "formant": 172.1317
+        },
+        "2": {
+            "frequency": 124.0,
+            "magnitude": 1999807.9911,
+            "formant": 169.03
+        },
+        "3": {
+            "frequency": 147.4,
+            "magnitude": 1794872.6262,
+            "formant": 168.2479
+        },
+        "4": {
+            "frequency": 140.2,
+            "magnitude": 2134833.3228,
+            "formant": 170.0212
+        },
+        "5": {
+            "frequency": 158.2,
+            "magnitude": 1987574.0478,
+            "formant": 167.6313
+        },
+        "6": {
+            "frequency": 125.2,
+            "magnitude": 2074388.2807,
+            "formant": 170.5744
+        },
+        "7": {
+            "frequency": 128.0,
+            "magnitude": 2284847.1543,
+            "formant": 169.6786
+        },
+        "8": {
+            "frequency": 142.2,
+            "magnitude": 2153553.9825,
+            "formant": 169.8706
+        },
+        "9": {
+            "frequency": 125.4,
+            "magnitude": 2115679.8321,
+            "formant": 170.1187
+        },
+        "10": {
+            "frequency": 129.0,
+            "magnitude": 2169219.3954,
+            "formant": 169.9
+        },
+        "11": {
+            "frequency": 148.4,
+            "magnitude": 1791568.7472,
+            "formant": 173.4225
+        },
+        "12": {
+            "frequency": 126.0,
+            "magnitude": 1823401.636,
+            "formant": 171.6697
+        },
+        "13": {
+            "frequency": 134.2,
+            "magnitude": 2065054.7709,
+            "formant": 167.3234
+        },
+        "14": {
+            "frequency": 124.4,
+            "magnitude": 1932688.1017,
+            "formant": 167.9859
+        },
+        "15": {
+            "frequency": 148.6,
+            "magnitude": 2209342.6577,
+            "formant": 171.2482
+        },
+        "16": {
+            "frequency": 123.6,
+            "magnitude": 2216682.7183,
+            "formant": 171.4678
+        },
+        "17": {
+            "frequency": 149.0,
+            "magnitude": 2359082.4762,
+            "formant": 167.5265
+        },
+        "18": {
+            "frequency": 148.8,
+            "magnitude": 1921686.6308,
+            "formant": 171.1663
+        },
+        "19": {
+            "frequency": 128.4,
+            "magnitude": 2249245.1905,
+            "formant": 168.8
+        },
+        "20": {
+            "frequency": 129.0,
+            "magnitude": 2295454.4706,
+            "formant": 170.1179
+        },
+        "21": {
+            "frequency": 132.4,
+            "magnitude": 2116368.0571,
+            "formant": 170.5818
+        },
+        "22": {
+            "frequency": 145.6,
+            "magnitude": 2087132.5583,
+            "formant": 170.4081
+        },
+        "23": {
+            "frequency": 313.0,
+            "magnitude": 2095458.3891,
+            "formant": 168.5023
+        },
+        "24": {
+            "frequency": 128.6,
+            "magnitude": 2055914.8647,
+            "formant": 169.4707
+        },
+        "25": {
+            "frequency": 147.2,
+            "magnitude": 2162741.117,
+            "formant": 169.8881
+        },
+        "26": {
+            "frequency": 127.8,
+            "magnitude": 1951766.4238,
+            "formant": 170.5606
+        },
+        "27": {
+            "frequency": 150.2,
+            "magnitude": 2028839.8013,
+            "formant": 171.8662
+        },
+        "28": {
+            "frequency": 145.4,
+            "magnitude": 2169692.8875,
+            "formant": 172.429
+        },
+        "29": {
+            "frequency": 151.0,
+            "magnitude": 2075530.3257,
+            "formant": 169.9537
+        },
+        "30": {
+            "frequency": 144.4,
+            "magnitude": 2019200.2187,
+            "formant": 173.2436
+        },
+        "31": {
+            "frequency": 131.8,
+            "magnitude": 1977937.5122,
+            "formant": 169.3743
+        },
+        "32": {
+            "frequency": 148.0,
+            "magnitude": 2183220.4874,
+            "formant": 169.2243
+        },
+        "33": {
+            "frequency": 145.2,
+            "magnitude": 2180634.6912,
+            "formant": 167.7781
+        },
+        "34": {
+            "frequency": 141.8,
+            "magnitude": 2317091.6157,
+            "formant": 169.7624
+        },
+        "35": {
+            "frequency": 143.6,
+            "magnitude": 2290006.4691,
+            "formant": 169.7752
+        },
+        "36": {
+            "frequency": 123.0522,
+            "magnitude": 968700.6649,
+            "formant": 167.4877
+        }
+    },
+    "2": {
+        "0": {
+            "frequency": 485.8,
+            "magnitude": 243547.9759,
+            "formant": 168.8189
+        },
+        "1": {
+            "frequency": 189.0,
+            "magnitude": 379858.6662,
+            "formant": 171.2504
+        },
+        "2": {
+            "frequency": 179.8,
+            "magnitude": 319775.5761,
+            "formant": 170.3534
+        },
+        "3": {
+            "frequency": 179.4,
+            "magnitude": 263237.7179,
+            "formant": 168.3079
+        },
+        "4": {
+            "frequency": 197.2,
+            "magnitude": 397195.0125,
+            "formant": 166.1197
+        },
+        "5": {
+            "frequency": 191.6,
+            "magnitude": 305603.0002,
+            "formant": 168.6386
+        },
+        "6": {
+            "frequency": 194.8,
+            "magnitude": 277570.0277,
+            "formant": 170.0376
+        },
+        "7": {
+            "frequency": 526.2,
+            "magnitude": 308943.0348,
+            "formant": 166.7908
+        },
+        "8": {
+            "frequency": 194.0,
+            "magnitude": 270134.8107,
+            "formant": 169.3072
+        },
+        "9": {
+            "frequency": 241.8,
+            "magnitude": 233463.6989,
+            "formant": 171.1985
+        },
+        "10": {
+            "frequency": 487.4,
+            "magnitude": 227022.7171,
+            "formant": 168.719
+        },
+        "11": {
+            "frequency": 439.4,
+            "magnitude": 260597.7808,
+            "formant": 171.3131
+        },
+        "12": {
+            "frequency": 406.6,
+            "magnitude": 172360.3389,
+            "formant": 173.6594
+        },
+        "13": {
+            "frequency": 191.6,
+            "magnitude": 241333.434,
+            "formant": 171.6977
+        },
+        "14": {
+            "frequency": 183.2,
+            "magnitude": 244041.6163,
+            "formant": 169.2054
+        },
+        "15": {
+            "frequency": 184.0,
+            "magnitude": 218312.6542,
+            "formant": 167.8877
+        },
+        "16": {
+            "frequency": 186.6,
+            "magnitude": 248643.3157,
+            "formant": 169.8196
+        },
+        "17": {
+            "frequency": 186.6,
+            "magnitude": 195276.5593,
+            "formant": 170.058
+        },
+        "18": {
+            "frequency": 174.0,
+            "magnitude": 155579.9031,
+            "formant": 171.2439
+        },
+        "19": {
+            "frequency": 440.2,
+            "magnitude": 281537.7036,
+            "formant": 172.0948
+        },
+        "20": {
+            "frequency": 236.2,
+            "magnitude": 271518.5226,
+            "formant": 169.8572
+        },
+        "21": {
+            "frequency": 446.4,
+            "magnitude": 278087.1629,
+            "formant": 175.4008
+        },
+        "22": {
+            "frequency": 496.8,
+            "magnitude": 273703.0219,
+            "formant": 168.9164
+        },
+        "23": {
+            "frequency": 183.2,
+            "magnitude": 263878.9133,
+            "formant": 171.5751
+        },
+        "24": {
+            "frequency": 182.0,
+            "magnitude": 204699.5361,
+            "formant": 171.6007
+        },
+        "25": {
+            "frequency": 179.2,
+            "magnitude": 234789.0799,
+            "formant": 170.5452
+        },
+        "26": {
+            "frequency": 423.2,
+            "magnitude": 156378.7435,
+            "formant": 173.5112
+        },
+        "27": {
+            "frequency": 177.2,
+            "magnitude": 317000.187,
+            "formant": 170.4808
+        },
+        "28": {
+            "frequency": 173.2,
+            "magnitude": 168764.2559,
+            "formant": 170.1648
+        },
+        "29": {
+            "frequency": 176.6,
+            "magnitude": 214068.1921,
+            "formant": 167.8239
+        },
+        "30": {
+            "frequency": 409.2,
+            "magnitude": 211663.5061,
+            "formant": 169.9197
+        },
+        "31": {
+            "frequency": 442.0,
+            "magnitude": 225191.1887,
+            "formant": 171.9849
+        },
+        "32": {
+            "frequency": 172.6,
+            "magnitude": 238838.7935,
+            "formant": 168.4847
+        },
+        "33": {
+            "frequency": 187.6,
+            "magnitude": 167630.5653,
+            "formant": 169.4757
+        },
+        "34": {
+            "frequency": 479.4,
+            "magnitude": 234658.9122,
+            "formant": 168.674
+        },
+        "35": {
+            "frequency": 175.2,
+            "magnitude": 199744.8091,
+            "formant": 171.6242
+        },
+        "36": {
+            "frequency": 197.8,
+            "magnitude": 275804.2495,
+            "formant": 169.69
+        },
+        "37": {
+            "frequency": 178.4,
+            "magnitude": 286010.0014,
+            "formant": 170.1667
+        },
+        "38": {
+            "frequency": 491.2,
+            "magnitude": 205330.8032,
+            "formant": 170.4833
+        },
+        "39": {
+            "frequency": 444.4,
+            "magnitude": 207820.1789,
+            "formant": 170.7954
+        },
+        "40": {
+            "frequency": 189.2,
+            "magnitude": 224622.5444,
+            "formant": 170.8711
+        },
+        "41": {
+            "frequency": 177.2,
+            "magnitude": 231784.744,
+            "formant": 169.823
+        },
+        "42": {
+            "frequency": 173.4,
+            "magnitude": 209518.1891,
+            "formant": 170.7711
+        },
+        "43": {
+            "frequency": 180.0,
+            "magnitude": 215826.4851,
+            "formant": 171.0102
+        },
+        "44": {
+            "frequency": 406.8,
+            "magnitude": 250960.6477,
+            "formant": 169.9683
+        },
+        "45": {
+            "frequency": 439.8,
+            "magnitude": 211760.0194,
+            "formant": 170.7651
+        },
+        "46": {
+            "frequency": 177.6,
+            "magnitude": 265279.9264,
+            "formant": 170.7086
+        },
+        "47": {
+            "frequency": 177.6,
+            "magnitude": 173577.3488,
+            "formant": 170.4613
+        },
+        "48": {
+            "frequency": 175.4,
+            "magnitude": 172704.9961,
+            "formant": 167.5362
+        },
+        "49": {
+            "frequency": 412.8,
+            "magnitude": 119705.0501,
+            "formant": 171.3715
+        },
+        "50": {
+            "frequency": 489.8,
+            "magnitude": 351187.2942,
+            "formant": 168.3901
+        },
+        "51": {
+            "frequency": 520.8,
+            "magnitude": 195116.4381,
+            "formant": 168.6442
+        },
+        "52": {
+            "frequency": 1324.375,
+            "magnitude": 104053.5687,
+            "formant": 167.3933
+        }
+    }
+}

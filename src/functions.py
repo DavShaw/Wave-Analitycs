@@ -1,9 +1,11 @@
 import pyaudio
+import librosa
 import os
 import wave
 import numpy as np
 import scipy.fftpack as fft
 import scipy.io.wavfile as wav
+from scipy.signal import find_peaks
 
 # Given a wave, get the fourier transform (doesnt need to be fixed)
 
@@ -69,7 +71,7 @@ def generateSyntheticSound(frequency, duration, fs=44100):
 
 def getMaxMagnitude(magnitude, df):
     posm = np.where(magnitude == np.max(magnitude))
-    return df[posm]
+    return float(df[posm][0])
 
 
 def getGenr(frequency, activate_error=False, error=(15/100)):
@@ -158,6 +160,20 @@ def captureAudio(duration=8, filename='src/realtimesound.wav'):
     wf.close()
 
     print("Audio recording (off)")
+
+
+def getFormant(transform, magnitude, df):
+    peaks, _ = find_peaks(magnitude, height=1000)
+    formants = []
+    for peak in peaks:
+        if df[peak] > 85 and df[peak] < 255:
+            formants.append(df[peak])
+    return sum(formants) / len(formants)
+
+
+def getMfcc(sound, fs, nmfcc=13):
+    mfccs = librosa.feature.mfcc(y=sound, sr=fs, n_mfcc=nmfcc)
+    return mfccs
 
 
 def splitSoundIntoSegments(soundArray, fs, segmentDuration=5):

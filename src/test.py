@@ -1,13 +1,14 @@
 from functions import getPhase, getFft, getWaveData, getMagnitude, getGenr
 from functions import getDiscreteFrequency, getMaxMagnitude, getTimeVector
-from functions import splitSoundIntoSegments, getRms
+from functions import splitSoundIntoSegments, getRms, getMfcc, getFormant
 import json
 
 data = {}
 
 paths = ["sounds/david.wav", "sounds/cristian.wav", "sounds/christian.wav"]
 for path in paths:
-    data[path] = {}
+    newKey = paths.index(path)
+    data[newKey] = {}
     fs, sound = getWaveData(path)
     soundsArray = splitSoundIntoSegments(sound, fs)
 
@@ -15,10 +16,16 @@ for path in paths:
         transform = getFft(currentsound)
         magnitude = getMagnitude(transform)
         rms = getRms(magnitude)
+        rms = round(rms, 4)
         df = getDiscreteFrequency(fs, transform)
         hz = getMaxMagnitude(magnitude, df)
-        data[path][i] = {'rms': rms, 'hz': hz}
+        hz = round(hz, 4)
+        formant = getFormant(transform, magnitude, df)
+        formant = round(formant, 4)
+        data[newKey][i] = {'frequency': hz,
+                           'magnitude': rms, 'formant': formant}
 
-print(data["sounds/david.wav"])
-# with open("sounddata.json", 'w') as json_file:
-#   json.dump(data, json_file, indent=4)
+print(data)
+print(f"Data type: {(type(data))}")
+with open("sounddata.json", 'w') as json_file:
+    json.dump(data, json_file, indent=4)
