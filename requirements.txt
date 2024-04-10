@@ -6,3 +6,6 @@ pyaudio
 os
 wave
 librosa
+scikit-learn
+matplotlib
+seaborn

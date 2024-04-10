@@ -18,4 +18,4 @@ for key, value in data.items():
 
 df = pd.DataFrame(records)
 
-print(df)
+df.to_excel("dataset.xlsx",index=False)
