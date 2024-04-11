@@ -70,5 +70,3 @@ def predict_With_list(frecuency:float,magnitude:float,formant:float)-> str:
 
     return f"{names[predecit_names[0]]}"
 
-
-print(predict_With_list(320.200,1485318.68,171.4079))
