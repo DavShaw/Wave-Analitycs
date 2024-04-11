@@ -1,2 +1,0 @@
-- To fix: matplotlib is not working, cannot plot the function (FIXED)
-- To do: lets plot the function of magnitude - df and sound - time
