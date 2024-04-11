@@ -3,9 +3,10 @@ numpy
 scipy
 matplotlib
 pyaudio
-os
 wave
 librosa
 scikit-learn
 matplotlib
 seaborn
+openpyxl
+scikit-learn
